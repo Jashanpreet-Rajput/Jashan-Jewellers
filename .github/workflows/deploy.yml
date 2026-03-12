@@ -1,0 +1,77 @@
+name: Node.js CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_test_backend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install backend dependencies
+      run: npm install
+      working-directory: ./backend/src
+
+    - name: Create .env file for backend tests
+      run: |
+        echo "PORT=5001" >> .env
+        echo "DB_HOST=127.0.0.1" >> .env
+        echo "DB_USER=test_user" >> .env
+        echo "DB_PASSWORD=test_password" >> .env
+        echo "DB_NAME=test_jashan_jewellers" >> .env
+        echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+        echo "JWT_EXPIRES_IN=1h" >> .env
+        echo "ADMIN_USERNAME=${{ secrets.ADMIN_USERNAME }}" >> .env
+        echo "ADMIN_PASSWORD=${{ secrets.ADMIN_PASSWORD }}" >> .env
+      working-directory: ./backend/src
+
+    # Set up a MySQL service for testing
+    - name: Start MySQL Test Database
+      run: |
+        docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=test_password -e MYSQL_DATABASE=test_jashan_jewellers -p 3307:3306 -d mysql:8.0
+        # Wait for MySQL to be ready
+        sleep 15
+        docker exec test-mysql mysql -u root -ptest_password test_jashan_jewellers < database/schema.sql
+        docker exec test-mysql mysql -u root -ptest_password test_jashan_jewellers < database/seed_data.sql
+        # Update DB_HOST in .env to point to the docker container IP or 127.0.0.1:3307
+        sed -i 's/DB_HOST=.*/DB_HOST=127.0.0.1/' ./backend/src/.env
+        sed -i 's/DB_PASSWORD=.*/DB_PASSWORD=test_password/' ./backend/src/.env
+        sed -i 's/DB_NAME=.*/DB_NAME=test_jashan_jewellers/' ./backend/src/.env
+        echo "DB_PORT=3307" >> ./backend/src/.env # Add port to connect to host-exposed port
+      working-directory: . # Run from root to access database folder
+
+    - name: Run backend tests
+      run: npm test
+      working-directory: ./backend/src
+
+    # Clean up test database
+    - name: Stop MySQL Test Database
+      if: always()
+      run: docker rm -f test-mysql
+
+    # Future steps: Build Docker image and push to a registry (e.g., ECR, Docker Hub)
+    # - name: Docker Login
+    #   uses: docker/login-action@v2
+    #   with:
+    #     username: ${{ secrets.DOCKER_USERNAME }}
+    #     password: ${{ secrets.DOCKER_PASSWORD }}
+    # - name: Build and push Docker image
+    #   uses: docker/build-push-action@v4
+    #   with:
+    #     context: .
+    #     file: ./Dockerfile
+    #     push: true
+    #     tags: your_docker_username/jashan-jewellers-backend:latest

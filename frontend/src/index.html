@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jashan Jewellers - Custom Gold & Silver Jewellery</title>
+    <meta name="description" content="Jashan Jewellers: Premium Gold & Silver Jewellery Catalogue. Custom designs crafted on order. Contact us for inquiries.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon placeholders -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text x='0' y='14'>💎</text></svg>" type="image/svg+xml" />
+</head>
+<body>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact-buttons">
+        <a href="https://wa.me/919988380803" target="_blank" class="floating-btn whatsapp-btn" aria-label="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919988380803" class="floating-btn call-btn" aria-label="Call Us">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- Top Information Bar -->
+    <div class="top-info-bar">
+        <div class="container">
+            <p><i class="fas fa-map-marker-alt"></i> V.P.O Benra, Dist. Sangrur, Punjab, India</p>
+            <p><i class="fas fa-phone-alt"></i> 99883-80803 | 9888456988</p>
+            <p><i class="fas fa-clock"></i> Open: 9:00 AM – 9:00 PM</p>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar sticky-navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <span class="logo-text">Jashan Jewellers</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-item">Home</a>
+                <div class="dropdown">
+                    <button class="nav-item dropbtn">Gold Jewellery <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" data-metal="Gold" data-category="Kada">Kada</a>
+                        <a href="#" data-metal="Gold" data-category="Bangles">Bangles</a>
+                        <a href="#" data-metal="Gold" data-category="Chain">Chain</a>
+                        <a href="#" data-metal="Gold" data-category="Haar / Necklace">Haar / Necklace</a>
+                        <a href="#" data-metal="Gold" data-category="Ring">Ring</a>
+                        <a href="#" data-metal="Gold" data-category="Earrings">Earrings</a>
+                        <a href="#" data-metal="Gold" data-category="Anklets">Anklets</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="nav-item dropbtn">Silver Jewellery <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" data-metal="Silver" data-category="Kada">Kada</a>
+                        <a href="#" data-metal="Silver" data-category="Bangles">Bangles</a>
+                        <a href="#" data-metal="Silver" data-category="Chain">Chain</a>
+                        <a href="#" data-metal="Silver" data-category="Haar / Necklace">Haar / Necklace</a>
+                        <a href="#" data-metal="Silver" data-category="Ring">Ring</a>
+                        <a href="#" data-metal="Silver" data-category="Earrings">Earrings</a>
+                        <a href="#" data-metal="Silver" data-category="Anklets">Anklets</a>
+                    </div>
+                </div>
+                <a href="#bridal-collection" class="nav-item">Bridal Collection</a>
+                <a href="#lightweight-jewellery" class="nav-item">Lightweight Jewellery</a>
+                <a href="#custom-jewellery" class="nav-item">Custom Jewellery</a>
+                <a href="#about-us" class="nav-item">About Us</a>
+                <a href="#contact" class="nav-item">Contact</a>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search designs..." aria-label="Search designs">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="logo-3d-container">
+                    <div class="logo-3d">JJ</div>
+                    <span class="gemstone-accent"></span>
+                </div>
+                <h1>Jashan Jewellers</h1>
+                <p class="tagline">“Custom Gold & Silver Jewellery Crafted on Order”</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="browse-designs-btn">Browse Designs</button>
+                    <button class="btn btn-secondary" id="request-custom-btn">Request Custom Jewellery</button>
+                    <a href="https://wa.me/919988380803" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Inquiry</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Section -->
+        <section id="dynamic-content" class="dynamic-content container hidden">
+            <!-- This section will be populated by JavaScript based on navigation -->
+        </section>
+
+        <!-- Homepage Sections (visible by default) -->
+        <section id="homepage-sections">
+
+            <!-- Jewellery Type Selection (initial browsing step) -->
+            <section id="jewellery-type-selection" class="section-padded container hidden">
+                <h2 class="section-title">Start Browsing Our Collections</h2>
+                <div class="type-selection-grid">
+                    <div class="type-card gold-selection-card" data-metal-type="Gold">
+                        <img src="https://via.placeholder.com/300x200/C9A227/0F0F0F?text=Gold+Jewellery" alt="Gold Jewellery" class="type-image">
+                        <h3>Gold Jewellery</h3>
+                        <p>Explore our exquisite range of custom gold designs.</p>
+                        <button class="btn btn-primary browse-metal-btn" data-metal-type="Gold">Browse Gold</button>
+                    </div>
+                    <div class="type-card silver-selection-card" data-metal-type="Silver">
+                        <img src="https://via.placeholder.com/300x200/AAAAAA/0F0F0F?text=Silver+Jewellery" alt="Silver Jewellery" class="type-image">
+                        <h3>Silver Jewellery</h3>
+                        <p>Discover our unique collection of sterling silver pieces.</p>
+                        <button class="btn btn-primary browse-metal-btn" data-metal-type="Silver">Browse Silver</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jewellery Categories Section (hidden by default) -->
+            <section id="jewellery-categories-section" class="section-padded container hidden">
+                <h2 class="section-title">Our Jewellery Categories</h2>
+                <div class="category-grid" id="category-grid">
+                    <!-- Categories will be loaded here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Jewellery Catalogue Section (hidden by default) -->
+            <section id="jewellery-catalogue-section" class="section-padded container hidden">
+                <h2 class="section-title" id="catalogue-title">Browse Designs</h2>
+                <div class="catalogue-layout">
+                    <aside class="filter-panel" id="filter-panel">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <h4>Jewellery Type</h4>
+                            <div id="filter-jewellery-type" class="filter-options">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Metal Type</h4>
+                            <div id="filter-metal-type" class="filter-options">
+                                <label><input type="radio" name="metal-filter" value="All" checked> All</label>
+                                <label><input type="radio" name="metal-filter" value="Gold"> Gold</label>
+                                <label><input type="radio" name="metal-filter" value="Silver"> Silver</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Weight Filter</h4>
+                            <div id="filter-weight" class="filter-options">
+                                <label><input type="radio" name="weight-filter" value="All" checked> All</label>
+                                <label><input type="radio" name="weight-filter" value="Under 5 grams"> Under 5 grams</label>
+                                <label><input type="radio" name="weight-filter" value="5-10 grams"> 5–10 grams</label>
+                                <label><input type="radio" name="weight-filter" value="10-20 grams"> 10–20 grams</label>
+                                <label><input type="radio" name="weight-filter" value="20-40 grams"> 20–40 grams</label>
+                                <label><input type="radio" name="weight-filter" value="40+ grams"> 40+ grams</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Occasion Filter</h4>
+                            <div id="filter-occasion" class="filter-options">
+                                <label><input type="radio" name="occasion-filter" value="All" checked> All</label>
+                                <label><input type="radio" name="occasion-filter" value="Daily Wear"> Daily Wear</label>
+                                <label><input type="radio" name="occasion-filter" value="Wedding"> Wedding</label>
+                                <label><input type="radio" name="occasion-filter" value="Party Wear"> Party Wear</label>
+                                <label><input type="radio" name="occasion-filter" value="Traditional"> Traditional</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary" id="reset-filters-btn">Reset Filters</button>
+                    </aside>
+                    <div class="jewellery-grid" id="jewellery-catalogue-grid">
+                        <!-- Jewellery cards will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jewellery Detail Page (hidden by default) -->
+            <section id="jewellery-detail-section" class="section-padded container hidden">
+                <div class="detail-container" id="jewellery-detail-content">
+                    <!-- Detail content will be loaded here by JavaScript -->
+                </div>
+                <h3 class="section-title related-designs-title">Related Designs</h3>
+                <div class="jewellery-grid related-designs-grid" id="related-designs-grid">
+                    <!-- Related designs will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Trending Designs Section -->
+            <section id="trending-designs" class="section-padded container">
+                <h2 class="section-title">Trending Designs</h2>
+                <div class="horizontal-scroll-container">
+                    <div class="trending-grid" id="trending-jewellery-grid">
+                        <!-- Trending designs loaded here by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bridal Jewellery Section -->
+            <section id="bridal-collection" class="section-padded container">
+                <h2 class="section-title">Bridal Collection</h2>
+                <div class="bridal-grid" id="bridal-jewellery-grid">
+                    <!-- Bridal designs loaded here by JS -->
+                </div>
+            </section>
+
+            <!-- Lightweight Jewellery Section -->
+            <section id="lightweight-jewellery" class="section-padded container">
+                <h2 class="section-title">Lightweight Jewellery</h2>
+                <div class="lightweight-filters">
+                    <label><input type="radio" name="lightweight-filter" value="all" checked> All</label>
+                    <label><input type="radio" name="lightweight-filter" value="under5"> Under 5 grams</label>
+                    <label><input type="radio" name="lightweight-filter" value="5-10"> 5–10 grams</label>
+                    <label><input type="radio" name="lightweight-filter" value="10-20"> 10–20 grams</label>
+                    <label><input type="radio" name="lightweight-filter" value="20plus"> 20+ grams</label>
+                </div>
+                <div class="jewellery-grid" id="lightweight-jewellery-grid">
+                    <!-- Lightweight designs loaded here by JS -->
+                </div>
+            </section>
+
+            <!-- Custom Jewellery Section -->
+            <section id="custom-jewellery" class="section-padded container">
+                <h2 class="section-title">Custom Jewellery</h2>
+                <p class="section-subtitle">Turn your vision into a masterpiece. We craft bespoke gold & silver jewellery tailored to your desires.</p>
+                
+                <div class="custom-process">
+                    <div class="process-step">
+                        <i class="fas fa-lightbulb process-icon"></i>
+                        <h3>1. Share Your Idea</h3>
+                        <p>Tell us your design concept, preferred metal, and any inspiration.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-drafting-compass process-icon"></i>
+                        <h3>2. Expert Crafting</h3>
+                        <p>Our skilled artisans bring your unique design to life with precision.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-gem process-icon"></i>
+                        <h3>3. Exquisite Finish</h3>
+                        <p>Receive your beautifully crafted, one-of-a-kind jewellery piece.</p>
+                    </div>
+                </div>
+
+                <form id="custom-request-form" class="custom-request-form">
+                    <h3>Request Your Custom Piece</h3>
+                    <div class="form-group">
+                        <label for="cr-name">Your Name:</label>
+                        <input type="text" id="cr-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cr-phone">Phone Number:</label>
+                        <input type="tel" id="cr-phone" name="phone_number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cr-type">Jewellery Type (e.g., Ring, Necklace):</label>
+                        <input type="text" id="cr-type" name="jewellery_type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cr-weight">Expected Weight (e.g., "10-15 grams", "Heavy"):</label>
+                        <input type="text" id="cr-weight" name="expected_weight">
+                    </div>
+                    <div class="form-group">
+                        <label for="cr-image">Upload Design Image (optional, provide URL):</label>
+                        <input type="url" id="cr-image" name="design_image_url" placeholder="e.g., https://example.com/my-design.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="cr-message">Message / Details:</label>
+                        <textarea id="cr-message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Custom Jewellery Request</button>
+                    <p id="custom-request-message" class="form-message"></p>
+                </form>
+            </section>
+
+            <!-- How Order Works Section -->
+            <section id="how-order-works" class="section-padded container">
+                <h2 class="section-title">How Our Custom Order Process Works</h2>
+                <div class="order-steps">
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-search-dollar"></i></div>
+                        <h3>1. Browse & Choose</h3>
+                        <p>Explore our catalogue or bring your unique design idea.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-headset"></i></div>
+                        <h3>2. Contact Us</h3>
+                        <p>Reach out via WhatsApp or Phone to discuss your needs.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-ruler-combined"></i></div>
+                        <h3>3. Discuss & Customize</h3>
+                        <p>Finalize design, metal type, weight, and any customizations.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-hammer"></i></div>
+                        <h3>4. Jewellery Crafted</h3>
+                        <p>Our expert artisans meticulously handcraft your bespoke piece.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-box-open"></i></div>
+                        <h3>5. Pickup or Delivery</h3>
+                        <p>Collect your finished jewellery or arrange for secure delivery.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about-us" class="section-padded container">
+                <h2 class="section-title">About Jashan Jewellers</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/400x300/C9A227/0F0F0F?text=Jashan+Jewellers+Shop" alt="Jashan Jewellers Shop">
+                    </div>
+                    <div class="about-text">
+                        <p>Jashan Jewellers is a trusted family jewellery shop, proudly serving customers with exquisite Gold and Silver jewellery. With generations of experience, we specialize in crafting custom designs tailored to our customers' unique visions.</p>
+                        <p><strong>Owner:</strong> Rajvinder Kumar (Rinku)</p>
+                        <ul>
+                            <li><i class="fas fa-star gold-star"></i> Skilled craftsmanship passed down through generations.</li>
+                            <li><i class="fas fa-star gold-star"></i> Bespoke custom design jewellery for every occasion.</li>
+                            <li><i class="fas fa-star gold-star"></i> Assurance of Hallmark gold and certified silver.</li>
+                            <li><i class="fas fa-star gold-star"></i> Your trusted local jeweller for quality and integrity.</li>
+                        </ul>
+                        <p>We believe in building lasting relationships through transparency, exceptional quality, and personalized service.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Testimonials -->
+            <section id="testimonials" class="section-padded container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Beautiful custom jewellery and perfect finishing. Exceeded my expectations!"</p>
+                        <p class="customer-name">- Priyanka D.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Very trustworthy jeweller for wedding jewellery. The designs are exquisite and the weight is accurate."</p>
+                        <p class="customer-name">- Harjinder S.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Great design and accurate weight. Excellent craftsmanship and friendly service every time."</p>
+                        <p class="customer-name">- Manpreet K.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section-padded container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><i class="fas fa-user"></i> <strong>Owner:</strong> Rajvinder Kumar (Rinku)</p>
+                        <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> <a href="tel:+919988380803">99883-80803</a>, <a href="tel:+919888456988">9888456988</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong></p>
+                        <address>
+                            V.P.O Benra<br>
+                            Dist. Sangrur<br>
+                            Punjab, India
+                        </address>
+                        <div class="contact-buttons">
+                            <a href="https://wa.me/919988380803" target="_blank" class="btn btn-whatsapp-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                            <a href="tel:+919988380803" class="btn btn-call-lg"><i class="fas fa-phone-alt"></i> Call Now</a>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <h3>Find Us</h3>
+                        <!-- Google Map Placeholder -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13778.502092120022!2d75.76196235!3d30.34757205!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!2m3!1f0!
